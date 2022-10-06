@@ -1,0 +1,12 @@
+[submodule "xdf2mne"]
+	path = xdf2mne
+	url = https://github.com/jzerfowski/xdf2mne
+[submodule "fif2csv"]
+	path = fif2csv
+	url = https://github.com/jzerfowski/fif2csv
+[submodule "Triggerduino"]
+	path = Triggerduino
+	url = https://github.com/jzerfowski/Triggerduino
+[submodule "fieldline_lsl"]
+	path = fieldline_lsl
+	url = https://github.com/jzerfowski/fieldline_lsl.git
