@@ -1,0 +1,59 @@
+{
+    "source": {
+        "class": "None",
+        "parameters": {}
+    },
+    "preprocessing": {
+        "class": "None",
+        "parameters": {}
+    },
+    "classification": {
+        "class": "PipelineClassificationModule",
+        "parameters": {
+            "settings_file": "",
+            "grid_assignment_file": "",
+            "bandpass_center": 0.0,
+            "bandpass_width": 0.0
+        }
+    },
+    "task": {
+        "class": "OPMExperimentModule",
+        "parameters": {
+            "num_cues_training": 9,
+            "num_cues_feedback": 6,
+            "num_blocks": 5,
+            "random_order": true,
+            "cue_length": 5.0,
+            "iti_min": 3.0,
+            "iti_max": 5.0,
+            "end_continuous": true
+        }
+    },
+    "feedback": {
+        "class": "OPMFeedbackModule",
+        "parameters": {
+            "display_pacman": true,
+            "display_relax": true,
+            "window_maximized": false,
+            "window_width": 400,
+            "window_height": 280,
+            "window_left": 400,
+            "window_top": 190,
+            "screen_index": -1,
+            "display_classification_value": false
+        }
+    },
+    "recording": {
+        "class": "LabRecorderModule",
+        "parameters": {
+            "Run": 1,
+            "require_streams": false,
+            "record_all_streams": true,
+            "save_experiment_params": false,
+            "Location": "",
+			"Study": "",
+			"Subject": "",
+			"Task": ""
+        }
+    }
+}

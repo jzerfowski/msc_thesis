@@ -1,0 +1,70 @@
+{
+    "training_classes_regexp": { "CLOSE": "CLOSE/START/.*", "RELAX": "RELAX/START/.*"},
+    "training_tmin": 1,
+    "training_tmax": 5,
+    "pipeline_preprocessing": {
+        "nodes": [
+            {
+                "type": "BandpassFilterNode",
+                "sfreq": 1000,
+                "f_lowpass": 13.5,
+                "f_highpass": 10.5,
+                "filter_length": 499
+            }
+        ]
+    },
+    "pipeline_classification": {
+        "nodes": [
+            {
+                "type": "ChannelSelectorNode",
+                "selected_channels": null,
+                "excluded_channels": null
+            },
+            {
+                "type": "PlottingNode",
+                "title": "Filtered OPM signals"
+            },
+            {
+                "type": "CSPNode",
+                "n_components": 2,
+                "method": "largest"
+            },
+            {
+                "type": "PlottingNode",
+                "title": "CSP Out"
+            },
+            {
+                "type": "BufferNode",
+                "buffer_length": 400,
+                "shift": 100
+            },
+            {
+                "type": "ReductionNode",
+                "functions": [
+                    {
+                        "module": "numpy",
+                        "name": "var",
+                        "args": {"axis": -1, "keepdims":  true}
+                    },
+                    {
+                        "module": "numpy",
+                        "name": "log"
+                    }
+                ]
+            },
+            {
+                "type": "LDAscikitNode"
+            },
+            {
+                "type": "SinglePoleFilterNode",
+                "sfreq": 10,
+                "time_const": 0.5
+            },
+            {
+                "type": "PlottingNode",
+                "title": "LDAout",
+                "nominal_srate": 10
+            }
+        ]
+    }
+}
