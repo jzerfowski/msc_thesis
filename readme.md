@@ -1,7 +1,7 @@
 # Optically pumped magnetometers for a brain-computer interface based on event-related desynchronization
 This repository contains the publicly available code associated with the Master's thesis project by [Jan Zerfowski](https://janzerfowski.de), conducted as a cooperation between the [Donders Institute for Brain, Cognition and Behaviour](https://www.ru.nl/donders/), the [Clinical Neurotechnology Lab](http://www.clinical-neurotechnology.com/) at [Charité – Universitätsmedizin Berlin](https://www.charite.de/) and the [Working Group 8.21 - Optical Magnetometry](https://www.ptb.de/cms/en/ptb/fachabteilungen/abt8/ag-821.html) at the [Physikalisch-Technische Bundesanstalt](https://www.ptb.de/cms/en.html) in Berlin.
 
-The work was supervised by Surjo Soekadar and Michael Tangermann.
+The work was supervised by Surjo Soekadar and Michael Tangermann. The thesis is also available under DOI [10.5281/zenodo.10998007](https://doi.org/10.5281/zenodo.10998007)
 
 ## Content of the repository
 - [readme.md](./readme.md) This readme
